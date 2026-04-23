@@ -1,2 +1,1 @@
-// Vite configuration placeholder
 

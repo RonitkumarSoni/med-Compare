@@ -1,2 +1,1 @@
-// Frontend ESLint configuration placeholder
 
