@@ -3,7 +3,6 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import Lenis from 'lenis';
 import 'react-toastify/dist/ReactToastify.css';
-import GlobalWidgets from './components/GlobalWidgets';
 import AppRoutes from './routes';
 
 function App() {
@@ -21,7 +20,6 @@ function App() {
     <Router>
       <ToastContainer position="bottom-right" theme="dark" />
       <AppRoutes />
-      <GlobalWidgets />
     </Router>
   );
 }
