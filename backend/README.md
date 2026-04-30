@@ -29,9 +29,13 @@ Hyperlocal medicine price comparison platform backend.
 3. Set up environment variables in `.env`:
    - `MONGODB_URI`
    - `JWT_SECRET`
+   - `CLIENT_URL`
+   - `SUPABASE_URL`
+   - `SUPABASE_SERVICE_ROLE_KEY`
    - `CLOUDINARY_CLOUD_NAME`
    - `CLOUDINARY_API_KEY`
    - `CLOUDINARY_API_SECRET`
+   - `GEMINI_API_KEY` (if using chat assistant)
 
 ### Seeding Data
 To populate the database with sample data:
@@ -43,6 +47,19 @@ npm run seed
 ```bash
 npm run dev
 ```
+
+## Deployment Notes
+
+### Render
+- Root directory: `backend`
+- Build command: `npm install`
+- Start command: `npm start`
+- Health check path: `/`
+- Set `CLIENT_URL` to your deployed frontend URL
+
+### Frontend Integration
+- Set frontend `VITE_API_BASE_URL` to your deployed backend URL, for example:
+  `https://your-render-service.onrender.com/api`
 
 ## API Documentation
 
