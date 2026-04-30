@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Navbar from '../components/layout/Navbar';
+import Seo from '../components/common/SEO';
 
 const LandingPage = () => {
   const trustSectionRef = useRef(null);
@@ -37,6 +38,11 @@ const LandingPage = () => {
 
   return (
     <div className="bg-background text-on-surface font-body antialiased">
+      <Seo
+        title="Compare Medicine Prices Near You"
+        description="Compare medicine prices across nearby pharmacies, discover better deals, and save on essential prescriptions with MedCompare."
+        path="/"
+      />
       {/* TopNavBar */}
       <Navbar fullWidth={true} />
       <main className="pt-24">
