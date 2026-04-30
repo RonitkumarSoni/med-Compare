@@ -14,6 +14,7 @@ import {
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { cn } from '../lib/utils';
+import Seo from '../components/common/SEO';
 
 
 const StatItem = ({ val, label }) => (
@@ -26,6 +27,11 @@ const StatItem = ({ val, label }) => (
 const AboutPage = () => {
   return (
     <div className="max-w-6xl mx-auto space-y-32 py-20 px-6 overflow-hidden">
+      <Seo
+        title="About MedCompare"
+        description="Learn how MedCompare improves medicine price transparency, empowers pharmacies, and helps patients make smarter healthcare decisions."
+        path="/about"
+      />
       {/* Hero Narrative */}
       <div className="flex flex-col items-center text-center space-y-12 max-w-4xl mx-auto">
         <motion.div 

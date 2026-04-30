@@ -5,6 +5,7 @@ import { Pill, ShieldCheck, Mail, Lock, ChevronRight, Stethoscope, Building2 } f
 import { useAuth } from '../context/AuthContext';
 import { toast } from 'react-toastify';
 import supabase from '../utils/supabaseClient';
+import Seo from '../components/common/SEO';
 
 const LoginPage = () => {
    const [email, setEmail] = useState('');
@@ -43,6 +44,12 @@ const LoginPage = () => {
 
    return (
       <div className="min-h-screen flex items-center justify-center bg-surface-container-lowest p-6 py-12 relative overflow-hidden font-body">
+         <Seo
+            title="Login"
+            description="Sign in to MedCompare to access pharmacy dashboards, saved searches, medicine comparisons, and personalized healthcare insights."
+            path="/login"
+            noIndex={true}
+         />
          {/* Editorial Background Elements */}
          <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] -ml-[400px] -mt-[400px]" />
          <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-[100px] -mr-[300px] -mb-[300px]" />

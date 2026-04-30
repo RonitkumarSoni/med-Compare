@@ -5,6 +5,7 @@ import { Pill, ShieldCheck, Mail, Lock, User, Building2, ChevronRight, Stethosco
 import { useAuth } from '../context/AuthContext';
 import { toast } from 'react-toastify';
 import supabase from '../utils/supabaseClient';
+import Seo from '../components/common/SEO';
 
 const SignupPage = () => {
    const [formData, setFormData] = useState({
@@ -66,6 +67,12 @@ const SignupPage = () => {
 
    return (
       <div className="min-h-screen flex items-center justify-center bg-surface-container-lowest p-6 py-12 relative overflow-hidden font-body">
+         <Seo
+            title="Sign Up"
+            description="Create a MedCompare account to compare medicine prices, register your pharmacy, and unlock healthcare pricing intelligence."
+            path="/signup"
+            noIndex={true}
+         />
          {/* Editorial Background Elements */}
          <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] -mr-[400px] -mt-[400px]" />
          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-[100px] -ml-[300px] -mb-[300px]" />

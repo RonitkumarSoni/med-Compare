@@ -1,20 +1,37 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const SEO = ({ title, description, keywords }) => {
-  const siteTitle = 'MedCompare | Find & Compare Medicines in India';
-  const fullTitle = title ? `${title} | MedCompare` : siteTitle;
-  
+const SITE_NAME = 'MedCompare';
+const SITE_URL =
+  import.meta.env.VITE_SITE_URL || 'https://frontend-six-nu-25.vercel.app';
+
+const Seo = ({
+  title,
+  description,
+  path = '/',
+  noIndex = false,
+}) => {
+  const canonicalUrl = new URL(path, SITE_URL).toString();
+  const fullTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
+  const robots = noIndex ? 'noindex, nofollow' : 'index, follow';
+
   return (
     <Helmet>
       <title>{fullTitle}</title>
-      <meta name="description" content={description || 'Compare medicine prices across local pharmacies in India. Save money on healthcare with MedCompare.'} />
-      {keywords && <meta name="keywords" content={keywords} />}
+      <meta name="description" content={description} />
+      <meta name="robots" content={robots} />
+      <link rel="canonical" href={canonicalUrl} />
+
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content={SITE_NAME} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta property="og:url" content={canonicalUrl} />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
     </Helmet>
   );
 };
 
-export default SEO;
+export default Seo;

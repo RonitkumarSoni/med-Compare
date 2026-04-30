@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Shield, Lock, FileText, Globe, Eye, CheckCircle2, ChevronRight, Scale } from 'lucide-react';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+import Seo from '../components/common/SEO';
 
 const LegalSection = ({ title, content, icon: Icon }) => (
   <div className="space-y-6 pt-12 first:pt-0 border-t border-outline-variant/10 first:border-0 group">
@@ -56,6 +57,11 @@ const PrivacyPage = () => {
 
   return (
     <div className="max-w-6xl mx-auto py-20 px-6">
+      <Seo
+        title="Privacy Policy"
+        description="Review MedCompare privacy practices, data handling principles, and the safeguards used across our healthcare price comparison platform."
+        path="/privacy"
+      />
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-20">
         {/* Sticky Sidebar Navigation */}
         <div className="hidden lg:block">

@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 import Button from '../components/ui/Button';
 import Input from '../components/ui/Input';
 import Card from '../components/ui/Card';
+import Seo from '../components/common/SEO';
 
 const ContactMethod = ({ icon: Icon, title, value, desc }) => (
   <Card variant="glass" className="flex flex-col gap-6 p-8 border-primary/5 hover:border-primary/20 transition-all group">
@@ -51,6 +52,11 @@ const ContactPage = () => {
 
   return (
     <div className="max-w-6xl mx-auto space-y-20 py-20 px-6">
+      <Seo
+        title="Contact MedCompare"
+        description="Reach the MedCompare team for pharmacy onboarding, support questions, and enterprise healthcare partnership inquiries."
+        path="/contact"
+      />
       {/* Editorial Header */}
       <div className="max-w-3xl space-y-8">
         <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/5 text-primary rounded-full">
