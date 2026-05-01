@@ -19,9 +19,18 @@ export const registerPharmacy = asyncHandler(async (req, res, next) => {
     return next(new ErrorResponse('You already have a registered pharmacy', 400));
   }
 
+  const insertData = {
+    owner_id: req.user.id,
+    shop_name: req.body.shopName || req.body.shop_name,
+    shop_address: req.body.address || req.body.shop_address,
+    contact_number: req.body.phone || req.body.contact_number,
+    city: req.body.city || 'Delhi',
+    state: req.body.state || 'Delhi',
+  };
+
   const { data: pharmacy, error } = await supabase
     .from('pharmacies')
-    .insert([req.body])
+    .insert([insertData])
     .select()
     .single();
 

@@ -101,7 +101,7 @@ export const getPharmacyInquiries = asyncHandler(async (req, res, next) => {
 export const respondToInquiry = asyncHandler(async (req, res, next) => {
   const { data: inquiry, error: fError } = await supabase
     .from('inquiries')
-    .select('*, pharmacies(id, owner_id, shopName)')
+    .select('*, pharmacies(id, owner_id, shop_name)')
     .eq('id', req.params.id)
     .single();
 
@@ -129,7 +129,7 @@ export const respondToInquiry = asyncHandler(async (req, res, next) => {
     {
       user_id: inquiry.user_id,
       title: 'Pharmacy Responded',
-      message: `${inquiry.pharmacies.shopName} has responded to your inquiry`,
+      message: `${inquiry.pharmacies.shop_name} has responded to your inquiry`,
       type: 'inquiry'
     }
   ]);
