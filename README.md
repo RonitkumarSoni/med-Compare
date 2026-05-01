@@ -149,7 +149,6 @@ medCompare/
 │   ├── .env.example
 │   └── .gitignore
 │
-├── render.yaml               # Render deployment config
 ├── .gitignore
 └── README.md
 ```
