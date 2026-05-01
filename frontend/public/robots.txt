@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /dashboard
+Disallow: /settings
+Disallow: /profile
 
-Sitemap: https://frontend-six-nu-25.vercel.app/sitemap.xml
+Sitemap: https://med-compare.vercel.app/sitemap.xml

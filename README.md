@@ -62,30 +62,103 @@ There is no simple way for users to compare prices and find the best deal nearby
 
 ## 🛠️ Tech Stack
 
-- Frontend: React.js / Next.js  
-- Backend: Node.js / Express  
-- Database: MongoDB  
-- Styling: Tailwind CSS  
-- Design: Figma  
-- Deployment: Vercel / Render  
+- **Frontend:** React.js (Vite)  
+- **Backend:** Node.js / Express  
+- **Database:** Supabase (PostgreSQL)  
+- **Auth:** Supabase Auth (Google OAuth)  
+- **Styling:** Tailwind CSS  
+- **Deployment:** Vercel (Frontend) / Render (Backend)  
 
 ---
 
 ## 📂 Project Structure
 
 ```text
-frontend/
-├── public/
-│   └── avatars/
-└── src/
-    ├── assets/
-    ├── components/
-    │   ├── layout/
-    │   └── ui/
-    ├── lib/
-    └── pages/
+medCompare/
+├── backend/
+│   ├── src/
+│   │   ├── config/          # Supabase & env configuration
+│   │   ├── controllers/     # Route handler logic
+│   │   ├── middlewares/      # Auth, error handling middleware
+│   │   ├── models/           # Data models
+│   │   ├── routes/           # API route definitions
+│   │   │   ├── authRoutes.js
+│   │   │   ├── medicineRoutes.js
+│   │   │   ├── pharmacyRoutes.js
+│   │   │   ├── inquiryRoutes.js
+│   │   │   ├── adminRoutes.js
+│   │   │   ├── uploadRoutes.js
+│   │   │   ├── chatRoutes.js
+│   │   │   └── dashboardRoutes.js
+│   │   ├── services/         # Business logic services
+│   │   ├── utils/            # Helper functions
+│   │   ├── validations/      # Input validation schemas
+│   │   ├── app.js            # Express app setup & middleware
+│   │   └── server.js         # Server entry point
+│   ├── package.json
+│   ├── .env.example
+│   └── .gitignore
+│
+├── frontend/
+│   ├── public/
+│   │   ├── avatars/          # User avatar images
+│   │   ├── images/           # Static images
+│   │   ├── favicon.svg
+│   │   ├── robots.txt
+│   │   └── sitemap.xml
+│   ├── src/
+│   │   ├── api/              # Axios API client
+│   │   ├── assets/           # Static assets
+│   │   ├── components/
+│   │   │   ├── common/       # Reusable components (SEO, Skeleton, etc.)
+│   │   │   ├── layout/       # Layout components (Navbar, Sidebar)
+│   │   │   └── ui/           # UI components (Buttons, Cards)
+│   │   ├── context/          # React context providers
+│   │   ├── hooks/            # Custom React hooks
+│   │   ├── lib/              # Utility libraries
+│   │   ├── pages/            # Page components
+│   │   │   ├── LandingPage.jsx
+│   │   │   ├── LoginPage.jsx
+│   │   │   ├── SignupPage.jsx
+│   │   │   ├── MedicineCompare.jsx
+│   │   │   ├── MedicineDetails.jsx
+│   │   │   ├── ComparisonPage.jsx
+│   │   │   ├── PharmacyDashboard.jsx
+│   │   │   ├── PharmacyDetail.jsx
+│   │   │   ├── PharmacySettings.jsx
+│   │   │   ├── PharmacyInsights.jsx
+│   │   │   ├── InventoryManagement.jsx
+│   │   │   ├── UserDashboard.jsx
+│   │   │   ├── UserProfile.jsx
+│   │   │   ├── SavedWatchlist.jsx
+│   │   │   ├── AdminOversight.jsx
+│   │   │   ├── ClinicalAnalytics.jsx
+│   │   │   ├── AboutPage.jsx
+│   │   │   ├── ContactPage.jsx
+│   │   │   ├── PrivacyPage.jsx
+│   │   │   └── ...more
+│   │   ├── routes/           # React Router route definitions
+│   │   ├── store/            # State management
+│   │   ├── utils/            # Frontend utility functions
+│   │   ├── App.jsx           # Root App component
+│   │   ├── main.jsx          # Vite entry point
+│   │   └── index.css         # Global styles
+│   ├── vercel.json           # Vercel SPA routing config
+│   ├── vite.config.js        # Vite configuration
+│   ├── package.json
+│   ├── .env.example
+│   └── .gitignore
+│
+├── .gitignore
+└── README.md
 ```
 
+---
+
+## 🔗 Live Demo
+
+- **Frontend:** [https://med-compare.vercel.app](https://med-compare.vercel.app)  
+- **Backend API:** [https://med-compare-2wge.onrender.com](https://med-compare-2wge.onrender.com)  
 
 ---
 
@@ -98,18 +171,6 @@ https://www.figma.com/design/svFKcrbxUl8nmBNylqzpfj/Untitled?node-id=6-4&p=f&t=T
 - User flow & dashboard design  
 - Premium healthcare SaaS layout  
 - Designed with focus on clean UI, proper spacing, and real-world usability  
-
----
-
-## 🔗 Live Demo (Optional)
-
-👉 Add your deployed link here  
-
----
-
-## 📸 Screenshots
-
-👉 Add your project screenshots here  
 
 ---
 

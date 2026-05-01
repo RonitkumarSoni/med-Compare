@@ -1,27 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://frontend-six-nu-25.vercel.app/</loc>
+    <loc>https://med-compare.vercel.app/</loc>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://frontend-six-nu-25.vercel.app/about</loc>
+    <loc>https://med-compare.vercel.app/medicine-compare</loc>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://frontend-six-nu-25.vercel.app/contact</loc>
+    <loc>https://med-compare.vercel.app/price-comparison</loc>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://frontend-six-nu-25.vercel.app/privacy</loc>
+    <loc>https://med-compare.vercel.app/about</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://frontend-six-nu-25.vercel.app/login</loc>
+    <loc>https://med-compare.vercel.app/contact</loc>
+    <priority>0.6</priority>
+    <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://frontend-six-nu-25.vercel.app/signup</loc>
+    <loc>https://med-compare.vercel.app/login</loc>
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://frontend-six-nu-25.vercel.app/medicine-compare</loc>
+    <loc>https://med-compare.vercel.app/signup</loc>
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://frontend-six-nu-25.vercel.app/price-comparison</loc>
+    <loc>https://med-compare.vercel.app/privacy</loc>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
   </url>
 </urlset>
