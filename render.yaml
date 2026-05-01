@@ -1,9 +1,0 @@
-services:
-  - type: web
-    name: medcompare-backend
-    runtime: node
-    rootDir: backend
-    buildCommand: npm install
-    startCommand: npm start
-    plan: free
-    healthCheckPath: /
