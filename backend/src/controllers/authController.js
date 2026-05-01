@@ -35,6 +35,7 @@ export const register = asyncHandler(async (req, res, next) => {
         { 
           owner_id: user.id, 
           shop_name: shopName, 
+          shop_address: req.body.address || 'Address not provided',
           contact_number: phone,
           city: city || 'Mumbai', // Fallback
           state: state || 'Maharashtra'
