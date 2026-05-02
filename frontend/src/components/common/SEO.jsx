@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 
 const SITE_NAME = 'MedCompare';
 const SITE_URL =
-  import.meta.env.VITE_SITE_URL || 'https://frontend-six-nu-25.vercel.app';
+  import.meta.env.VITE_SITE_URL || 'https://med-compare.vercel.app';
 
 const Seo = ({
   title,
