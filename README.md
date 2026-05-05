@@ -191,16 +191,16 @@ https://www.figma.com/design/svFKcrbxUl8nmBNylqzpfj/Untitled?node-id=6-4&p=f&t=T
 ## 📸 Project Screenshots
 
 ### Landing Page
-![Landing Page](https://med-compare.vercel.app/images/landing-preview.png)
+![Landing Page](./frontend/public/images/landing-preview.png)
 
 ### Medicine Search & Comparison
-![Medicine Compare](https://med-compare.vercel.app/images/compare-preview.png)
+![Medicine Compare](./frontend/public/images/compare-preview.png)
 
 ### Pharmacy Dashboard
-![Pharmacy Dashboard](https://med-compare.vercel.app/images/pharmacy-dashboard-preview.png)
+![Pharmacy Dashboard](./frontend/public/images/pharmacy-dashboard-preview.png)
 
 ### User Dashboard
-![User Dashboard](https://med-compare.vercel.app/images/user-dashboard-preview.png)
+![User Dashboard](./frontend/public/images/user-dashboard-preview.png)
 
 ---
 
