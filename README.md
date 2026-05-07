@@ -1,9 +1,5 @@
 # 💊 MedCompare – Hyperlocal Medicine Price Comparison Platform
 
-[ ![Run in Postman](https://run.pstmn.io/button.svg) ](https://documenter.getpostman.com/view/50841099/2sBXqKnfAo)
-
-A premium healthcare SaaS platform that helps users compare medicine prices across nearby pharmacies in real-time and choose the most affordable option.
-
 ### 🔗 Quick Links
 
 | Resource | Link |
@@ -13,6 +9,10 @@ A premium healthcare SaaS platform that helps users compare medicine prices acro
 | 🖥️ Backend API | [med-compare-2wge.onrender.com](https://med-compare-2wge.onrender.com) |
 | 📮 Postman Docs | [View API Documentation](https://documenter.getpostman.com/view/50841099/2sBXqKnfAo) |
 | 🎬 YouTube Demo | [Watch Demo Video](https://www.youtube.com/watch?v=sfVarszQk2M) |
+
+[ ![Run in Postman](https://run.pstmn.io/button.svg) ](https://documenter.getpostman.com/view/50841099/2sBXqKnfAo)
+
+A premium healthcare SaaS platform that helps users compare medicine prices across nearby pharmacies in real-time and choose the most affordable option.
 
 ---
 
