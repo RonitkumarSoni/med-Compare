@@ -8,7 +8,7 @@
 | 🌐 Live Frontend | [med-compare.vercel.app](https://med-compare.vercel.app) |
 | 🖥️ Backend API | [med-compare-2wge.onrender.com](https://med-compare-2wge.onrender.com) |
 | 📮 Postman Docs | [View API Documentation](https://documenter.getpostman.com/view/50841099/2sBXqKnfAo) |
-| 🎬 YouTube Demo | [Watch Demo Video](https://www.youtube.com/watch?v=sfVarszQk2M) |
+| 🎬 YouTube Demo | [Watch Demo Video](https://youtu.be/ZyzcaePw9vc) |
 
 [ ![Run in Postman](https://run.pstmn.io/button.svg) ](https://documenter.getpostman.com/view/50841099/2sBXqKnfAo)
 
@@ -172,7 +172,7 @@ medCompare/
 - **Frontend:** [https://med-compare.vercel.app](https://med-compare.vercel.app)  
 - **Backend API:** [https://med-compare-2wge.onrender.com](https://med-compare-2wge.onrender.com)  
 - **API Documentation:** [View on Postman](https://documenter.getpostman.com/view/50841099/2sBXqKnfAo)  
-- **YouTube Demo:** [Watch Demo Video](https://www.youtube.com/watch?v=sfVarszQk2M)  
+- **YouTube Demo:** [Watch Demo Video](https://youtu.be/ZyzcaePw9vc)  
 
 ---
 
