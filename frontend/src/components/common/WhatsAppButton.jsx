@@ -8,7 +8,7 @@ const WhatsAppButton = ({ phoneNumber = "918738030604", message = "Hello MedComp
       href={whatsappUrl} 
       target="_blank" 
       rel="noopener noreferrer"
-      className="w-16 h-16 bg-[#25D366] text-white rounded-full shadow-2xl shadow-[#25D366]/40 flex items-center justify-center hover:scale-110 active:scale-95 transition-all group relative z-50"
+      className="w-14 h-14 sm:w-16 sm:h-16 bg-[#25D366] text-white rounded-full shadow-2xl shadow-[#25D366]/40 flex items-center justify-center hover:scale-110 active:scale-95 transition-all group relative z-50"
       aria-label="Chat on WhatsApp"
     >
       <i className="fa-brands fa-whatsapp text-3xl"></i>

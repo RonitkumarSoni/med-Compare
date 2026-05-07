@@ -37,12 +37,12 @@ const AppRoutes = () => {
         <Route index element={<LandingPage />} />
         <Route path="login" element={<LoginPage />} />
         <Route path="signup" element={<SignupPage />} />
-        <Route path="contact" element={<ContactPage />} />
-        <Route path="about" element={<AboutPage />} />
-        <Route path="privacy" element={<PrivacyPage />} />
       </Route>
 
       <Route path="/" element={<ConsumerLayout />}>
+        <Route path="contact" element={<ContactPage />} />
+        <Route path="about" element={<AboutPage />} />
+        <Route path="privacy" element={<PrivacyPage />} />
         <Route path="saved-watchlist" element={<SavedWatchlist />} />
         <Route path="/medicine-details" element={<MedicineDetails />} />
         <Route path="medicine-compare" element={<MedicineCompare />} />

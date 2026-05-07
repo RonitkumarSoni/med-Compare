@@ -56,7 +56,7 @@ const PrivacyPage = () => {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto py-20 px-6">
+    <div className="max-w-6xl mx-auto pt-32 pb-20 px-6">
       <Seo
         title="Privacy Policy"
         description="Review MedCompare privacy practices, data handling principles, and the safeguards used across our healthcare price comparison platform."

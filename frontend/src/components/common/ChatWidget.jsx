@@ -43,7 +43,7 @@ const ChatWidget = () => {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="w-16 h-16 bg-slate-900 text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform active:scale-95 group relative"
+          className="w-14 h-14 sm:w-16 sm:h-16 bg-slate-900 text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform active:scale-95 group relative"
         >
           <span className="material-symbols-outlined text-3xl group-hover:hidden">auto_awesome</span>
           <span className="material-symbols-outlined text-3xl hidden group-hover:block">chat</span>
@@ -53,7 +53,7 @@ const ChatWidget = () => {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-[120px] right-8 z-[10000] w-[380px] h-[600px] max-h-[80vh] bg-white rounded-3xl shadow-2xl border border-slate-100 flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-10 duration-300">
+        <div className="fixed bottom-24 right-4 left-4 sm:left-auto sm:right-8 sm:bottom-[120px] z-[10000] w-auto sm:w-[400px] h-[calc(100vh-140px)] sm:h-[600px] max-h-[85vh] bg-white rounded-3xl shadow-2xl border border-slate-100 flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-10 duration-300">
           {/* Header */}
           <div className="bg-slate-900 p-5 flex items-center justify-between text-white shrink-0">
             <div className="flex items-center gap-3">

@@ -26,7 +26,7 @@ const StatItem = ({ val, label }) => (
 
 const AboutPage = () => {
   return (
-    <div className="max-w-6xl mx-auto space-y-32 py-20 px-6 overflow-hidden">
+    <div className="max-w-6xl mx-auto space-y-32 pt-32 pb-20 px-6 overflow-hidden">
       <Seo
         title="About MedCompare"
         description="Learn how MedCompare improves medicine price transparency, empowers pharmacies, and helps patients make smarter healthcare decisions."

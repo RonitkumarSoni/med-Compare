@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Navbar from '../components/layout/Navbar';
+import Footer from '../components/layout/Footer';
 
 const ErrorEmptyStates = () => {
   const navigate = useNavigate();
@@ -63,8 +64,8 @@ const ErrorEmptyStates = () => {
                   <div className="relative z-10 flex flex-col items-center">
                     {/* 404 Number with medical cross overlay */}
                     <div className="relative">
-                      <span className="font-headline font-extrabold text-[8rem] md:text-[10rem] leading-none tracking-tighter text-surface-container-high/60 select-none">
-                        404
+                      <span className="font-headline font-extrabold text-[8rem] md:text-[10rem] leading-none tracking-tighter text-slate-300 select-none">
+                        4<span className="opacity-0">0</span>4
                       </span>
                       {/* Medical icon overlay in the "0" */}
                       <div className="absolute inset-0 flex items-center justify-center">
@@ -206,29 +207,7 @@ const ErrorEmptyStates = () => {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="w-full py-12 border-t border-slate-100 bg-slate-50">
-        <div className="flex flex-col items-center justify-center gap-6 px-8 max-w-[1440px] mx-auto">
-          <div className="flex flex-col items-center gap-2">
-            <span className="font-headline font-bold text-slate-900 text-xl">MedCompare</span>
-            <p className="text-slate-500 font-body text-sm leading-relaxed text-center">© 2024 MedCompare. Atmospheric Trust in Healthcare.</p>
-          </div>
-          <div className="flex flex-wrap justify-center gap-8">
-            <Link to="/privacy" className="text-slate-500 hover:text-blue-500 transition-colors font-body text-sm">Privacy Policy</Link>
-            <a className="text-slate-500 hover:text-blue-500 transition-colors font-body text-sm" href="#">Terms of Service</a>
-            <a className="text-slate-500 hover:text-blue-500 transition-colors font-body text-sm" href="#">Partner with Us</a>
-            <Link to="/contact" className="text-slate-500 hover:text-blue-500 transition-colors font-body text-sm">Contact</Link>
-          </div>
-          <div className="flex gap-4 mt-2">
-            <div className="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant cursor-pointer hover:bg-primary-container hover:text-white transition-all">
-              <span className="material-symbols-outlined text-lg">share</span>
-            </div>
-            <div className="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant cursor-pointer hover:bg-primary-container hover:text-white transition-all">
-              <span className="material-symbols-outlined text-lg">public</span>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
 
       {/* Keyframe Animations */}
       <style>{`
