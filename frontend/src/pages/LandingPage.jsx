@@ -54,55 +54,57 @@ const LandingPage = () => {
                 <span className="material-symbols-outlined text-sm text-emerald-500" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
                 TRUSTED BY 10k+ CLINICS
               </div>
-              <h1 className="font-headline text-5xl md:text-6xl font-extrabold tracking-tight text-on-surface mb-6 leading-[1.1]">
+              <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-on-surface mb-6 leading-[1.1] break-words">
                 Same medicine, <br />
                 <span className="text-primary">different prices.</span>
               </h1>
-              <p className="text-on-surface-variant text-lg leading-relaxed mb-10 max-w-xl">
+              <p className="text-on-surface-variant text-base sm:text-lg leading-relaxed mb-10 max-w-xl pr-4 sm:pr-0">
                 Instantly compare prescription costs across thousands of pharmacies. Stop overpaying for essential healthcare with real-time price transparency.
               </p>
               {/* Search Bar Component */}
               <div className="relative max-w-2xl group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary to-primary-container rounded-2xl blur opacity-25 group-focus-within:opacity-50 transition duration-1000"></div>
-                <div className="relative flex items-center bg-surface-container-lowest rounded-xl p-2 shadow-sm border border-outline-variant/20">
-                  <span className="material-symbols-outlined ml-4 text-outline">search</span>
-                  <input
-                    className="flex-1 bg-transparent border-none focus:ring-0 px-4 py-4 text-lg font-medium text-on-surface placeholder:text-on-surface-variant/50 outline-none"
-                    placeholder="Enter medicine name (e.g. Atorvastatin)"
-                    type="text"
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter') {
-                        handleSearch();
-                      }
-                    }}
-                  />
+                <div className="relative flex flex-col sm:flex-row items-stretch sm:items-center bg-surface-container-lowest rounded-xl p-2 shadow-sm border border-outline-variant/20 gap-2 sm:gap-0">
+                  <div className="flex items-center flex-1">
+                    <span className="material-symbols-outlined ml-4 text-outline">search</span>
+                    <input
+                      className="flex-1 w-full bg-transparent border-none focus:ring-0 px-2 sm:px-4 py-3 sm:py-4 text-base sm:text-lg font-medium text-on-surface placeholder:text-on-surface-variant/50 outline-none"
+                      placeholder="Enter medicine name..."
+                      type="text"
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                          handleSearch();
+                        }
+                      }}
+                    />
+                  </div>
                   <button 
                     onClick={handleSearch}
-                    className="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-4 rounded-lg font-bold text-lg active:scale-95 transition-transform"
+                    className="w-full sm:w-auto bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-3 sm:py-4 rounded-lg font-bold text-base sm:text-lg active:scale-95 transition-transform shrink-0"
                   >
                     Compare Now
                   </button>
                 </div>
               </div>
-              <div className="mt-12 flex flex-wrap gap-8">
+              <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-8">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 flex-shrink-0 rounded-2xl bg-surface-container-high flex items-center justify-center text-primary shadow-sm border border-outline-variant/10">
-                    <span className="material-symbols-outlined text-[28px]" style={{ fontVariationSettings: "'FILL' 1" }}>savings</span>
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 rounded-2xl bg-surface-container-high flex items-center justify-center text-primary shadow-sm border border-outline-variant/10">
+                    <span className="material-symbols-outlined text-[24px] sm:text-[28px]" style={{ fontVariationSettings: "'FILL' 1" }}>savings</span>
                   </div>
                   <div>
-                    <p className="text-on-surface font-bold">Avg. ₹45,000</p>
-                    <p className="text-on-surface-variant text-xs">Annual Savings</p>
+                    <p className="text-on-surface font-bold text-sm sm:text-base">Avg. ₹45,000</p>
+                    <p className="text-on-surface-variant text-[10px] sm:text-xs">Annual Savings</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 flex-shrink-0 rounded-2xl bg-surface-container-high flex items-center justify-center text-primary shadow-sm border border-outline-variant/10">
-                    <span className="material-symbols-outlined text-[28px]" style={{ fontVariationSettings: "'FILL' 1" }}>local_pharmacy</span>
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 rounded-2xl bg-surface-container-high flex items-center justify-center text-primary shadow-sm border border-outline-variant/10">
+                    <span className="material-symbols-outlined text-[24px] sm:text-[28px]" style={{ fontVariationSettings: "'FILL' 1" }}>local_pharmacy</span>
                   </div>
                   <div>
-                    <p className="text-on-surface font-bold">12,000+</p>
-                    <p className="text-on-surface-variant text-xs">Verified Pharmacies</p>
+                    <p className="text-on-surface font-bold text-sm sm:text-base">12,000+</p>
+                    <p className="text-on-surface-variant text-[10px] sm:text-xs">Verified Pharmacies</p>
                   </div>
                 </div>
               </div>
@@ -114,7 +116,7 @@ const LandingPage = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
               </div>
               {/* Floating Stat Cards */}
-              <div className="absolute -left-12 top-1/4 med-card p-6 w-64">
+              <div className="hidden lg:block absolute -left-12 top-1/4 med-card p-6 w-64">
                 <div className="flex items-center gap-4 mb-3">
                   <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-secondary-container text-on-secondary-container rounded-xl shadow-sm">
                     <span className="material-symbols-outlined text-[20px]">verified_user</span>
@@ -123,7 +125,7 @@ const LandingPage = () => {
                 </div>
                 <p className="text-on-surface-variant text-xs leading-relaxed font-body">Every pharmacy on our platform undergoes a rigorous 12-point certification process.</p>
               </div>
-              <div className="absolute -right-8 bottom-24 med-card p-6 w-64">
+              <div className="hidden lg:block absolute -right-8 bottom-24 med-card p-6 w-64">
                 <div className="flex items-center gap-4 mb-3">
                   <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-primary-container text-on-primary-container rounded-xl shadow-sm">
                     <span className="material-symbols-outlined text-[20px]">update</span>
@@ -135,7 +137,7 @@ const LandingPage = () => {
                   <span className="text-xs font-medium text-on-surface-variant font-body">Live price sync</span>
                 </div>
               </div>
-              <div className="absolute left-1/4 -bottom-10 med-card p-6 w-72">
+              <div className="hidden lg:block absolute left-1/4 -bottom-10 med-card p-6 w-72">
                 <div className="flex items-center justify-between mb-4">
                   <span className="font-headline font-bold text-sm">Savings Insights</span>
                   <span className="text-emerald-600 font-bold text-sm font-body">-₹1,240.00</span>
@@ -340,24 +342,24 @@ const LandingPage = () => {
                   </div>
                 </div>
               </div>
-              <div className="lg:col-span-7 relative">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-4 pt-12">
-                    <div className="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/5">
+              <div className="lg:col-span-7 relative mt-12 lg:mt-0">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                  <div className="space-y-4 sm:pt-12">
+                    <div className="bg-white/10 backdrop-blur-md p-6 sm:p-8 rounded-3xl border border-white/5">
                       <p className="text-3xl font-headline font-bold mb-2">98%</p>
                       <p className="text-sm opacity-60">Price Accuracy</p>
                     </div>
-                    <div className="bg-gradient-to-br from-primary to-primary-container p-8 rounded-3xl">
+                    <div className="bg-gradient-to-br from-primary to-primary-container p-6 sm:p-8 rounded-3xl">
                       <p className="text-3xl font-headline font-bold mb-2">24/7</p>
                       <p className="text-sm opacity-80">Pharmacist Support</p>
                     </div>
                   </div>
                   <div className="space-y-4">
-                    <div className="bg-white/5 backdrop-blur-xl p-8 rounded-3xl border border-white/5 aspect-square flex flex-col justify-end">
+                    <div className="bg-white/5 backdrop-blur-xl p-6 sm:p-8 rounded-3xl border border-white/5 aspect-auto sm:aspect-square flex flex-col justify-end min-h-[200px] sm:min-h-0">
                       <p className="text-sm font-bold tracking-widest uppercase mb-4">Patient Choice</p>
                       <p className="text-lg">Empowering users to choose value over convenience.</p>
                     </div>
-                    <div className="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/5">
+                    <div className="bg-white/10 backdrop-blur-md p-6 sm:p-8 rounded-3xl border border-white/5">
                       <img alt="Technology in healthcare" className="w-full h-32 object-cover rounded-xl mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2pYceGlTypAdn_NDVdpWGeICFs7_VJ5lZ9Po2fzsnUpWopLwVvAUn-7VHEBGEZIkfHJjJ-aSkN8RA_r4c25e9Ps0YfoP0NxU5RV-M0Y2X2qmB5oWCBxHqx76YLZkcmBch0ePtlS1_oCWOTYrMfmZV7wka0_ck_Q4fbxl9lDlpH1pesGZS0m1zmrA0UJgwhPdieHbliYSEaE4t3Ko7RVYnDCpcm42dRGLjiipWIlwaYcq7nwst2LDRx4dYXTU6n4NRF0fU22s8dZRF" />
                       <p className="text-sm font-medium">Integrated digital health records for seamless comparison.</p>
                     </div>

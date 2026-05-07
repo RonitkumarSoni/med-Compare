@@ -34,6 +34,7 @@ const Navbar = ({ fullWidth = false }) => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleLogout = async () => {
     await logout();
@@ -53,7 +54,7 @@ const Navbar = ({ fullWidth = false }) => {
         fullWidth ? "left-0" : "left-0 md:left-64"
       )}
     >
-      <nav className="flex justify-between items-center px-8 py-4 w-full max-w-[1440px] mx-auto">
+      <nav className="flex justify-between items-center px-4 md:px-8 py-4 w-full max-w-[1440px] mx-auto">
         <div className="flex items-center gap-4 flex-1">
           <Link to="/" className="flex items-center gap-2 group">
             <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-primary to-primary-container flex items-center justify-center text-white shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform">
@@ -87,17 +88,17 @@ const Navbar = ({ fullWidth = false }) => {
           </div>
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 md:gap-4 shrink-0">
           {user ? (
             <>
-              <Link to="/notifications" className="p-2 text-slate-500 hover:text-primary transition-all active:scale-90 relative">
+              <Link to="/notifications" className="hidden sm:block p-2 text-slate-500 hover:text-primary transition-all active:scale-90 relative">
                 <span className="material-symbols-outlined">notifications</span>
                 <span className="absolute top-2 right-2 w-2 h-2 bg-error rounded-full border border-white"></span>
               </Link>
-              <Link to="/settings" className="p-2 text-slate-500 hover:text-primary transition-all active:scale-90 relative">
+              <Link to="/settings" className="hidden sm:block p-2 text-slate-500 hover:text-primary transition-all active:scale-90 relative">
                 <span className="material-symbols-outlined">settings</span>
               </Link>
-              <Link to="/profile" className="w-10 h-10 rounded-full overflow-hidden border-2 border-white card-shadow cursor-pointer hover:border-primary/20 transition-all bg-surface-container">
+              <Link to="/profile" className="w-8 h-8 md:w-10 md:h-10 rounded-full overflow-hidden border-2 border-white card-shadow cursor-pointer hover:border-primary/20 transition-all bg-surface-container shrink-0">
                 <img 
                   alt="User avatar" 
                   className="w-full h-full object-cover" 
@@ -113,13 +114,60 @@ const Navbar = ({ fullWidth = false }) => {
           ) : (
             <Link 
               to="/login"
-              className="px-6 py-2.5 bg-primary text-on-primary rounded-xl font-bold font-headline shadow-lg shadow-primary/20 hover:opacity-90 active:scale-95 transition-all"
+              className="hidden md:inline-block px-6 py-2.5 bg-primary text-on-primary rounded-xl font-bold font-headline shadow-lg shadow-primary/20 hover:opacity-90 active:scale-95 transition-all"
+            >
+              Login
+            </Link>
+          )}
+          {/* Mobile Menu Button */}
+          <button 
+            className="xl:hidden p-1 sm:p-2 text-slate-500 hover:text-primary transition-all active:scale-90 shrink-0"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            <span className="material-symbols-outlined text-3xl">{isMobileMenuOpen ? 'close' : 'menu'}</span>
+          </button>
+        </div>
+      </nav>
+
+      {/* Mobile Menu Dropdown */}
+      {isMobileMenuOpen && (
+        <div className="xl:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl shadow-2xl border-t border-slate-100 flex flex-col p-4 gap-4 animate-in slide-in-from-top-2">
+          {/* Mobile Search */}
+          <div className="relative group w-full md:hidden">
+            <div className="absolute inset-y-0 left-4 flex items-center text-slate-400">
+              <span className="material-symbols-outlined text-xl">search</span>
+            </div>
+            <input 
+              className="pl-12 pr-4 py-3 bg-slate-50/50 border border-slate-200/50 rounded-2xl w-full text-sm outline-none placeholder:text-slate-400/60" 
+              placeholder="Search..." 
+              type="text" 
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' && searchTerm.trim()) {
+                  navigate(`/medicine-compare?q=${encodeURIComponent(searchTerm)}`);
+                  setIsMobileMenuOpen(false);
+                }
+              }}
+            />
+          </div>
+          
+          {/* Mobile Links */}
+          <Link to="/medicine-compare" onClick={() => setIsMobileMenuOpen(false)} className="font-bold text-slate-600 p-3 hover:bg-slate-50 rounded-xl transition-colors">Compare</Link>
+          <Link to="/pharmacies" onClick={() => setIsMobileMenuOpen(false)} className="font-bold text-slate-600 p-3 hover:bg-slate-50 rounded-xl transition-colors">Pharmacies</Link>
+          <Link to="/saved-watchlist" onClick={() => setIsMobileMenuOpen(false)} className="font-bold text-slate-600 p-3 hover:bg-slate-50 rounded-xl transition-colors">Watchlist</Link>
+          
+          {!user && (
+            <Link 
+              to="/login"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="mt-2 text-center w-full px-6 py-3 bg-primary text-white rounded-xl font-bold shadow-md shadow-primary/20"
             >
               Login
             </Link>
           )}
         </div>
-      </nav>
+      )}
     </header>
   );
 };
